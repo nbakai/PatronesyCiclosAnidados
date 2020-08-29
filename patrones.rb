@@ -116,30 +116,38 @@ numero_cero(5)
 # Método navidad(n)
 
 def navidad(size=3) 
-    (size-2).times do |i|
-        size.times do |j|
-            if  j==0 && i==1 || j == size-1 && i == 1 || j == size/2 && i == 0
-                print '*'
+i = 1
+a = size
+    for i in i..a do
+        print ' ' * a
+      
+        print '* ' * (1 * i -1)
+      
+        print "\n"
+      
+        a -= 1
+        i += 1
+    end
+   
+   
+    # size.times do |i|
+    #     i.times do |j|
+    #     print ' *'
+    #     end
+    #     print "\n"
+    # end
+    (size-3).times do |i|
+        (size-1).times do |j|
+            if j == size/2 
+                print '  *'
             else
                 print ' '
             end
-        end
-        puts
-    end
-    puts '* ' * (size-1)
-
-        (size-2).times do |i|
-            (size).times do |j|
-                if j == size/2 || j==0 && i==size-3 || j == size-1 && i == size-3
-                    print '*'
-                else
-                    print ' '
-                end
                 
-            end
-            puts
         end
-    
+         puts
+     end
+    puts " * " * (size-2)
 end
 
 navidad(5)
